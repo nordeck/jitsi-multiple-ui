@@ -35,7 +35,7 @@ meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
 
-## Custom Nginx config
+## Nginx customization (1)
 
 `Nginx` redirects the user to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page determines most of the
@@ -77,3 +77,11 @@ CODE="bamberg"
 cd /usr/share/jitsi-meet
 cp index.html index-$CODE.html
 ```
+
+See [index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html) for
+the original copy.
+
+The index page determines most of the runtime features by including some config
+files (_such as `config.js`, `interface_config.js`, etc._) into itself.
+Customize the index pages according to the needs. For example set custom config
+files in it.
