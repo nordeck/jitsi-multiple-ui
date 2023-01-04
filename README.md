@@ -26,3 +26,11 @@ to see it in action.
 ## Custom Jitsi URL
 
 ![Custom Jitsi URL](docs/custom-jitsi-url.png)
+
+We need a `code` section in `URL` to select a custom feature set and
+configuration for `Jitsi`. The last two sections of `path` have a special
+meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
+(_isolated room group_).
+
+Therefore we need a third section in `path` to put the `code`. So we are using a
+`path` with three subsections in our implementation.
