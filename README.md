@@ -40,8 +40,8 @@ Therefore we need a third section in `path` to put the `code`. So we are using a
 `Nginx` redirects the user to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page determines most of the
 runtime features of `Jitsi`. We don't want to use the same index page for all
-users. Therefore we need to select different index pages for different user
-groups depending on the `code` from the `URL`.
+users. Therefore we will select different index pages for different user groups
+depending on the `code` from the `URL`.
 
 We are adding the following location block into the `Nginx` configuration to
 catch the `code` from the `URL` and to select a custom index page for the
