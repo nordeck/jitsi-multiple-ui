@@ -6,6 +6,8 @@
 - [2. Custom UI](#2-custom-ui)
 - [3. Custom Jitsi URL](#3-custom-jitsi-ui)
 - [4. Nginx customization (custom index pages)](#4-nginx-customization-custom-index-pages)
+- [5. Custom index pages](#5-custom-index-pages)
+- [6. Nginx customization (custom config.js)](#6-nginx-customization-custom-config.js)
 
 ## 1. About
 
