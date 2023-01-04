@@ -57,7 +57,7 @@ We are adding the following location block into the `Nginx` configuration to
 catch the `code` from the `URL` and to select a custom index page for the
 request:
 
-```config
+```conf
 # nordeck: index selection
 location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
     set $index "index-$1.html";
@@ -67,7 +67,7 @@ location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
 
 And we are customizing the default `@root_path` block to apply redirection:
 
-```config
+```conf
 # nordeck: customized @root_path
 location @root_path {
     # rewrite ^/(.*)$ / break;
@@ -105,7 +105,7 @@ there will be multiple `config.js` in our implementation, we need to update
 
 Add the following location block into the `Nginx` configuration:
 
-```config
+```conf
 # nordeck: custom config files
 location ~ /([a-zA-Z0-9-]+)-config.js {
     alias /etc/jitsi/meet/$1-config.js;
@@ -129,3 +129,16 @@ cp YOUR-DOMAIN-config.js $PREFIX-config.js
 
 See [config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js) for
 the default template.
+
+## 8. Nginx customization (custom welcome page)
+
+As an option, it is possible to change the default landing page. This may be a
+static `HTML` page in `Jitsi` server or another page hosted on a different web
+server.
+
+```conf
+# nordeck: welcome page
+location = / {
+    return 302 https://$host/static/welcome.html
+}
+```
