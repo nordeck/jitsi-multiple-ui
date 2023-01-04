@@ -34,3 +34,30 @@ meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
 
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
+
+## Custom Nginx config
+
+`Nginx` redirects the user to `index.html` which is located in
+`/usr/share/jitsi-meet/` by default and this index page determines most of
+the runtime features of `Jitsi`. We don't want to use the same index page for
+all users. Therefore we need to select different index pages for different user
+groups depending on the `code` from the `URL`.
+
+We are adding the following location block into the `Nginx` configuration to
+catch the `code` from the `URL` and to select a custom index page for the
+request:
+
+```config
+    location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
+        set $index "$1.html";
+        rewrite ^/([^/?&:'"]+)/(.*)$ /$2;
+    }
+```
+
+And we are customizing the default `@root_path` block to apply redirection:
+
+```config
+    location @root_path {
+        rewrite ^/(.*)$ /$index break;
+    }
+```
