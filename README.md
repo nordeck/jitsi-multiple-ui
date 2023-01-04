@@ -35,7 +35,7 @@ meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
 
-## Nginx customization (index pages)
+## Nginx customization (custom index pages)
 
 `Nginx` redirects the user to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page determines most of the
@@ -86,18 +86,36 @@ files (_such as `config.js`, `interface_config.js`, etc._) into itself.
 Customize the index pages according to the needs. For example set custom config
 files in it.
 
-## Nginx customization (custom config files)
+## Nginx customization (custom config.js)
 
 `config.js` sets most of the runtime features and it is located in
 `/etc/jitsi/meet/` folder. `Nginx` uses a hard-coded `alias` to point it. Since
 there will be multiple `config.js` in our implementation, we need to update
-`Nginx` config to point the right location for the additional config files.
+`Nginx` config to point the right location for the additional `config.js` files.
 
 Add the following location block into the `Nginx` configuration:
 
 ```config
 # nordeck: custom config files
-location ~ /([a-zA-Z0-9]+)-config.js {
+location ~ /([a-zA-Z0-9-]+)-config.js {
     alias /etc/jitsi/meet/$1-config.js;
 }
 ```
+
+## Custom config.js
+
+Create an additional `config.js` file in `/etc/jitsi/meet/` for each feature
+set. The custom `config.js` file should be named as `PREFIX-config.js`. `PREFIX`
+must be a combination of letters and digits and `-`. The file name must match
+the one used in the index page. You may copy the original `config.js` file as a
+starting point.
+
+```bash
+PREFIX="bamberg-moderator"
+
+cd /etc/jitsi/meet
+cp YOUR-DOMAIN-config.js $PREFIX-config.js
+```
+
+See [config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js) for
+the default template.
