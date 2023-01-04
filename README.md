@@ -48,8 +48,9 @@ catch the `code` from the `URL` and to select a custom index page for the
 request:
 
 ```config
+    # nordeck: index selection
     location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
-        set $index "$1.html";
+        set $index "index-$1.html";
         rewrite ^/([^/?&:'"]+)/(.*)$ /$2;
     }
 ```
@@ -57,8 +58,20 @@ request:
 And we are customizing the default `@root_path` block to apply redirection:
 
 ```config
+    # nordeck: customized @root_path
     location @root_path {
         # rewrite ^/(.*)$ / break;
         rewrite ^/(.*)$ /$index break;
     }
+```
+
+Create an additional index page in `/usr/share/jitsi-meet/` for each custom
+group. The name of custom index file should be as `index-CODE.hmtl`. You may
+copy the original `index.html` file as a starting point.
+
+```bash
+CODE="bamberg"
+
+cd /usr/share/jitsi-meet
+cp index.html index-$CODE.html
 ```
