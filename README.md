@@ -58,6 +58,7 @@ And we are customizing the default `@root_path` block to apply redirection:
 
 ```config
     location @root_path {
+        # rewrite ^/(.*)$ / break;
         rewrite ^/(.*)$ /$index break;
     }
 ```
