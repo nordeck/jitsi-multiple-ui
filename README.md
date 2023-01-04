@@ -65,9 +65,11 @@ And we are customizing the default `@root_path` block to apply redirection:
     }
 ```
 
+## Custom index pages
+
 Create an additional index page in `/usr/share/jitsi-meet/` for each custom
-group. The name of custom index file should be as `index-CODE.hmtl`. You may
-copy the original `index.html` file as a starting point.
+group. The custom index page should be named as `index-CODE.hmtl`. You may copy
+the original `index.html` file as a starting point.
 
 ```bash
 CODE="bamberg"
