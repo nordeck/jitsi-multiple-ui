@@ -35,7 +35,7 @@ meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
 
-## Nginx customization (1)
+## Nginx customization (index pages)
 
 `Nginx` redirects the user to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page determines most of the
@@ -85,3 +85,19 @@ The index page determines most of the runtime features by including some config
 files (_such as `config.js`, `interface_config.js`, etc._) into itself.
 Customize the index pages according to the needs. For example set custom config
 files in it.
+
+## Nginx customization (custom config files)
+
+`config.js` sets most of the runtime features and it is located in
+`/etc/jitsi/meet/` folder. `Nginx` uses a hard-coded `alias` to point it. Since
+there will be multiple `config.js` in our implementation, we need to update
+`Nginx` config to point the right location for the additional config files.
+
+Add the following location block into the `Nginx` configuration:
+
+```config
+# nordeck: custom config files
+location ~ /([a-zA-Z0-9]+)-config.js {
+    alias /etc/jitsi/meet/$1-config.js;
+}
+```
