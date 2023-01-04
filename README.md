@@ -22,3 +22,7 @@ code.
 Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui-a.html)
 to see it in action.
+
+## Custom Jitsi URL
+
+![Custom Jitsi URL](docs/custom-jitsi-url.png)
