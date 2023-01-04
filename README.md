@@ -9,6 +9,7 @@
 - [5. Custom index pages](#5-custom-index-pages)
 - [6. Nginx customization (custom config.js)](#6-nginx-customization-custom-configjs)
 - [7. Custom config.js](#7-custom-configjs)
+- [8. Nginx customization (custom welcome page)](#8-nginx-customization-custom-welcome-page)
 
 ## 1. About
 
