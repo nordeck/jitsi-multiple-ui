@@ -13,8 +13,8 @@ Create a custom user interface for each user group. This UI may be a simple
 
 `Jitsi` will be embedded into custom user interfaces using
 [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe).
-This is the first layer of customization and mostly cover customization of outer
-space, not Jitsi itself.
+This is the first layer of customization and mostly covers customization of
+outer space, not Jitsi itself.
 
 Check [custom-ui-a.html](templates/custom-ui/custom-ui-a.html) for a sample
 code.
