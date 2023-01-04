@@ -18,3 +18,6 @@ No need to host these UI pages on the `Jitsi` server.
 
 This is the first layer of customization and mostly cover customization of outer
 space, not Jitsi itself.
+
+For a sample page, check
+[custom-ui-a.html](templates/custom-ui/custom-ui-a.html).
