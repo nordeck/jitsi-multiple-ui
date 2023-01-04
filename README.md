@@ -47,23 +47,23 @@ We are adding the following location block into the `Nginx` configuration to
 catch the `code` from the `URL` and to select a custom index page for the
 request:
 
-    ```config
-    # nordeck: index selection
-    location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
-        set $index "index-$1.html";
-        rewrite ^/([^/?&:'"]+)/(.*)$ /$2;
-    }
-    ```
+```config
+# nordeck: index selection
+location ~ ^/([^/?&:'"]+)/([^/?&:'"]+)/(.*)$ {
+    set $index "index-$1.html";
+    rewrite ^/([^/?&:'"]+)/(.*)$ /$2;
+}
+```
 
 And we are customizing the default `@root_path` block to apply redirection:
 
-    ```config
-    # nordeck: customized @root_path
-    location @root_path {
-        # rewrite ^/(.*)$ / break;
-        rewrite ^/(.*)$ /$index break;
-    }
-    ```
+```config
+# nordeck: customized @root_path
+location @root_path {
+    # rewrite ^/(.*)$ / break;
+    rewrite ^/(.*)$ /$index break;
+}
+```
 
 ## Custom index pages
 
