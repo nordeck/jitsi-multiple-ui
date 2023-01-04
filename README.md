@@ -76,6 +76,9 @@ location @root_path {
 }
 ```
 
+See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
+Nginx config example.
+
 ## 5. Custom index pages
 
 Create an additional index page in `/usr/share/jitsi-meet/` for each custom
@@ -113,6 +116,9 @@ location ~ /([a-zA-Z0-9-]+)-config.js {
 }
 ```
 
+See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
+Nginx config example.
+
 ## 7. Custom config.js
 
 Create an additional `config.js` file in `/etc/jitsi/meet/` for each feature
@@ -143,3 +149,6 @@ location = / {
     return 302 https://$host/static/welcome.html
 }
 ```
+
+See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
+Nginx config example.
