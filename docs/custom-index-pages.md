@@ -14,9 +14,12 @@ Create your custom index pages by cloning this default page and customize them
 according to needs.
 
 ```bash
-CODE="bamberg"
-
 cd /usr/share/jitsi-meet
+
+CODE="moderator"
+cp index.html index-$CODE.html
+
+CODE="guest"
 cp index.html index-$CODE.html
 ```
 

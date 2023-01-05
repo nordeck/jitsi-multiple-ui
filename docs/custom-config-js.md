@@ -15,10 +15,10 @@ them according to needs.
 ```bash
 cd /etc/jitsi/meet
 
-PREFIX="bamberg-moderator"
+PREFIX="moderator"
 cp YOUR-DOMAIN-config.js $PREFIX-config.js
 
-PREFIX="bamberg-guest"
+PREFIX="guest"
 cp YOUR-DOMAIN-config.js $PREFIX-config.js
 ```
 

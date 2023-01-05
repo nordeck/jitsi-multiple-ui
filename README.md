@@ -28,8 +28,8 @@ Create a custom user interface for each user group. This UI may be a simple
 This is the first layer of customization and mostly covers customization of
 outer space, not Jitsi itself.
 
-Check [custom-ui-a.html](templates/custom-ui/custom-ui-a.html) for a sample
-page.
+Check [custom-ui-a.html](templates/custom-ui/custom-ui-a.html) for a sample page
+with embedded `Jitsi`.
 
 Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui-a.html)
@@ -87,9 +87,12 @@ The custom index page should be named as `index-CODE.hmtl`. You may copy the
 original `index.html` file as a starting point.
 
 ```bash
-CODE="bamberg"
-
 cd /usr/share/jitsi-meet
+
+CODE="moderator"
+cp index.html index-$CODE.html
+
+CODE="guest"
 cp index.html index-$CODE.html
 ```
 
