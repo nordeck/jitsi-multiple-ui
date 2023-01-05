@@ -131,7 +131,7 @@ the one used in the index page. You may copy the original `config.js` file as a
 starting point.
 
 ```bash
-PREFIX="bamberg-moderator"
+PREFIX="moderator"
 
 cd /etc/jitsi/meet
 cp YOUR-DOMAIN-config.js $PREFIX-config.js
