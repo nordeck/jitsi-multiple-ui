@@ -139,7 +139,7 @@ cp YOUR-DOMAIN-config.js $PREFIX-config.js
 
 Check [custom config.js](docs/custom-config-js.md) for more info.
 
-See also [custom interface_config.js]((docs/custom-interface-config.md).
+See also [custom interface_config.js](docs/custom-interface-config.md).
 
 ## 8. Nginx customization (custom welcome page)
 
