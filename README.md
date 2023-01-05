@@ -108,7 +108,7 @@ Check [custom index pages](docs/custom-index-pages.md) for more info.
 `config.js` sets most of the runtime features and it is located in
 `/etc/jitsi/meet/` folder. `Nginx` uses a hard-coded `alias` to point it. Since
 there will be multiple `config.js` in our implementation, we need to update
-`Nginx` config to point the right location for the additional `config.js` files.
+`Nginx` config to point to right location for the additional `config.js` files.
 
 Add the following location block into the `Nginx` configuration:
 
