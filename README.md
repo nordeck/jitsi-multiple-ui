@@ -82,9 +82,9 @@ Nginx config example.
 
 ## 5. Custom index pages
 
-Create an additional index page in `/usr/share/jitsi-meet/` for each custom
-group. The custom index page should be named as `index-CODE.hmtl`. You may copy
-the original `index.html` file as a starting point.
+Create an additional index page in `/usr/share/jitsi-meet/` for each user group.
+The custom index page should be named as `index-CODE.hmtl`. You may copy the
+original `index.html` file as a starting point.
 
 ```bash
 CODE="bamberg"
