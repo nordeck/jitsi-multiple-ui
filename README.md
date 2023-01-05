@@ -139,6 +139,8 @@ cp YOUR-DOMAIN-config.js $PREFIX-config.js
 See [config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js) for
 the default template.
 
+Check [custom config.js](docs/custom-config-js.md) for more info.
+
 ## 8. Nginx customization (custom welcome page)
 
 As an option, it is possible to change the default landing page. This may be a
