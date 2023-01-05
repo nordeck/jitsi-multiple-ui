@@ -14,7 +14,8 @@
 ## 1. About
 
 This repo contains documents/files/config to support multiple UIs on a single
-`Jitsi` setup.
+`Jitsi` setup. This implementation only works for web clients, it has no effect
+for mobile applications.
 
 ## 2. Custom UI
 
