@@ -93,9 +93,6 @@ cd /usr/share/jitsi-meet
 cp index.html index-$CODE.html
 ```
 
-See [index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html) for
-the original copy.
-
 The index page sets most of the runtime features by including some config files
 (_such as `config.js`, `interface_config.js`, etc._) into itself. Customize the
 index pages according to needs. For example set custom config files in it.
@@ -135,9 +132,6 @@ PREFIX="bamberg-moderator"
 cd /etc/jitsi/meet
 cp YOUR-DOMAIN-config.js $PREFIX-config.js
 ```
-
-See [config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js) for
-the default template.
 
 Check [custom config.js](docs/custom-config-js.md) for more info.
 
