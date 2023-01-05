@@ -1,9 +1,9 @@
 # Custom index pages
 
 The default index page is `index.html` which is located in
-`/usr/share/jitsi-meet`. The index page determines most of the runtime features
-by including some config files (such as `config.js`, `interface_config.js`,
-etc.) into itself.
+`/usr/share/jitsi-meet`. The index page sets most of the runtime features by
+including some config files (such as `config.js`, `interface_config.js`, etc.)
+into itself.
 
 See [index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html) for
 the original copy.
@@ -49,4 +49,4 @@ var criticalFiles = [
 ...
 ```
 
-Most critical one is `config.js` that determines most of the runtime features.
+Most critical one is `config.js` which sets most of the runtime features.

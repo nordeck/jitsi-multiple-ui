@@ -50,9 +50,9 @@ Therefore we need a third section in `path` to put the `code`. So we are using a
 ## 4. Nginx customization (custom index pages)
 
 `Nginx` redirects users to `index.html` which is located in
-`/usr/share/jitsi-meet/` by default and this index page determines most of the
-runtime features of `Jitsi`. We don't want to use the same index page for all
-users. Therefore we will select different index pages for different user groups
+`/usr/share/jitsi-meet/` by default and this index page sets most of the runtime
+features of `Jitsi`. We don't want to use the same index page for all users.
+Therefore we will select different index pages for different user groups
 depending on the `code` from the `URL`.
 
 We are adding the following location block into the `Nginx` configuration to
@@ -96,10 +96,9 @@ cp index.html index-$CODE.html
 See [index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html) for
 the original copy.
 
-The index page determines most of the runtime features by including some config
-files (_such as `config.js`, `interface_config.js`, etc._) into itself.
-Customize the index pages according to the needs. For example set custom config
-files in it.
+The index page sets most of the runtime features by including some config files
+(_such as `config.js`, `interface_config.js`, etc._) into itself. Customize the
+index pages according to needs. For example set custom config files in it.
 
 Check [custom index pages](docs/custom-index-pages.md) for more info.
 
