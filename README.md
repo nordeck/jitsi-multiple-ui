@@ -101,6 +101,8 @@ files (_such as `config.js`, `interface_config.js`, etc._) into itself.
 Customize the index pages according to the needs. For example set custom config
 files in it.
 
+Check [custom index pages](docs/custom-index-pages.md) for more info.
+
 ## 6. Nginx customization (custom config.js)
 
 `config.js` sets most of the runtime features and it is located in

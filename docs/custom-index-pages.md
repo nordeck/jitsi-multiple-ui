@@ -1,4 +1,4 @@
-# Custom index page
+# Custom index pages
 
 The default index page is `index.html` which is located in
 `/usr/share/jitsi-meet`. The index page determines most of the runtime features
