@@ -180,3 +180,4 @@ This implementation has some limitations:
 - [Whitelisted config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/configWhitelist.ts)
 - [Default interface_config.js](https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js)
 - [Whitelisted interface_config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/interfaceConfigWhitelist.ts)
+- [Jitsi URL Generator](https://shawnchin.github.io/jitsi-url-generator/)
