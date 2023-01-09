@@ -12,7 +12,8 @@
   - [3.5 Custom config.js](#35-custom-configjs)
 - [4. Nginx customization (custom welcome page)](#4-nginx-customization-custom-welcome-page)
 - [5. Limitations](#5-limitations)
-- [6. Links](#6-links)
+- [6. iFrame vs multiple index pages](#6-iframe-vs-multiple-index-pages)
+- [7. Links](#7-links)
 
 ## 1. About
 
@@ -185,7 +186,21 @@ This implementation has some limitations:
 
 - A `path` with three subsections is mandatory as the meeting address.
 
-## 6. Links
+## 6. iFrame vs multiple index pages
+
+- Both methods can set the configuration parameters but there is no need to
+  update UI codes in the second option.
+
+- For the first option, the developer can decide how to configure `Jitsi`. For
+  the second option, the Jitsi admin can decide how to configure `Jitsi`.
+
+- The second option allows to use custom server-side include files (_such as
+  body.html, head.html, css_) for each group.
+
+- `iFrame` allows to create custom actions and much more integrations with the
+  custom UI.
+
+## 7. Links
 
 - [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
 - [Default index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html)
