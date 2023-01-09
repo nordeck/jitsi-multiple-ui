@@ -11,6 +11,7 @@
 - [7. Custom config.js](#7-custom-configjs)
 - [8. Nginx customization (custom welcome page)](#8-nginx-customization-custom-welcome-page)
 - [9. Limitations](#9-limitations)
+- [10. Links](#10-links)
 
 ## 1. About
 
@@ -167,3 +168,7 @@ This implementation has some limitations:
 - Not very flexible if frequent changes to Jitsi configuration are required.
 
 - A `path` with three subsections is mandatory as the meeting address.
+
+## 10. Links
+
+- [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
