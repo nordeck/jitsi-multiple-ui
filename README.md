@@ -49,6 +49,8 @@ the same feature set for all participants and for all meeting rooms by default.
 The following changes allow `Jitsi` to publish different index pages for
 different user groups.
 
+See [Nginx internal flow](docs/nginx-internal-flow.md)
+
 ### 3.1 Custom Jitsi URL
 
 ![Custom Jitsi URL](docs/custom-jitsi-url.png)
