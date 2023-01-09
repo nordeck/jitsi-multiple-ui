@@ -4,7 +4,7 @@
 
 - [1. About](#1-about)
 - [2. Custom UI with embedded Jitsi](#2-custom-ui-with-embedded-jitsi)
-- [3. Custom Jitsi with multiple index pages](#3-custom-jitsi-with-multiple-index-pages)
+- [3. Jitsi with multiple index pages](#3-jitsi-with-multiple-index-pages)
   - [3.1 Custom Jitsi URL](#31-custom-jitsi-url)
   - [3.2 Nginx configuration for custom index pages](#32-nginx-configuration-for-custom-index-pages)
   - [3.3 Custom index pages](#33-custom-index-pages)
@@ -41,7 +41,7 @@ Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui.html)
 to see it in action.
 
-## 3. Custom Jitsi with multiple index pages
+## 3. Jitsi with multiple index pages
 
 `Jitsi` publishes the same
 [index](https://github.com/jitsi/jitsi-meet/blob/master/index.html) page with
