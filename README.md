@@ -4,14 +4,15 @@
 
 - [1. About](#1-about)
 - [2. Custom UI with embedded Jitsi](#2-custom-ui-with-embedded-jitsi)
-- [3. Custom Jitsi URL](#3-custom-jitsi-ui)
-- [4. Nginx customization (custom index pages)](#4-nginx-customization-custom-index-pages)
-- [5. Custom index pages](#5-custom-index-pages)
-- [6. Nginx customization (custom config.js)](#6-nginx-customization-custom-configjs)
-- [7. Custom config.js](#7-custom-configjs)
-- [8. Nginx customization (custom welcome page)](#8-nginx-customization-custom-welcome-page)
-- [9. Limitations](#9-limitations)
-- [10. Links](#10-links)
+- [3. Custom Jitsi with multiple index pages](#3-custom-jitsi-with-multiple-index-pages)
+  - [3.1 Custom Jitsi URL](#31-custom-jitsi-ui)
+  - [3.2 Nginx customization (custom index pages)](#32-nginx-customization-custom-index-pages)
+  - [3.3 Custom index pages](#33-custom-index-pages)
+  - [3.4 Nginx customization (custom config.js)](#34-nginx-customization-custom-configjs)
+  - [3.5 Custom config.js](#35-custom-configjs)
+- [4. Nginx customization (custom welcome page)](#4-nginx-customization-custom-welcome-page)
+- [5. Limitations](#5-limitations)
+- [6. Links](#6-links)
 
 ## 1. About
 
@@ -39,19 +40,25 @@ Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui.html)
 to see it in action.
 
-## 3. Custom Jitsi URL
+## 3. Custom Jitsi with multiple index pages
+
+`Jitsi` publishes the same index page with the same feature set for all
+participants and for all meeting rooms. The following changes allow `Jitsi` to
+publish different index pages for different user groups.
+
+### 3.1 Custom Jitsi URL
 
 ![Custom Jitsi URL](docs/custom-jitsi-url.png)
 
-We need a `code` section in `URL` to select a custom feature set and
-configuration for `Jitsi`. The last two sections of `path` have a special
-meaning for `Jitsi`. The last one is `room` and the other one is `tenant`
-(_isolated room group_).
+We need a `code` section in `URL` to select a custom index page with its own
+fature set for `Jitsi`. The last two sections of `path` have a special meaning
+for `Jitsi`. The last one is `room` and the other one is `tenant` (_isolated
+room group_).
 
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
 
-## 4. Nginx customization (custom index pages)
+### 3.2 Nginx customization (custom index pages)
 
 `Nginx` redirects users to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page sets most of the runtime
@@ -84,7 +91,7 @@ location @root_path {
 See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
 Nginx config example.
 
-## 5. Custom index pages
+### 3.3 Custom index pages
 
 Create an additional index page in `/usr/share/jitsi-meet/` for each user group.
 The custom index page should be named as `index-CODE.hmtl`. You may copy the
@@ -106,7 +113,7 @@ index pages according to needs. For example set custom config files in it.
 
 Check [custom index pages](docs/custom-index-pages.md) for more info.
 
-## 6. Nginx customization (custom config.js)
+### 3.4 Nginx customization (custom config.js)
 
 `config.js` sets most of the runtime features and it is located in
 `/etc/jitsi/meet/` folder. `Nginx` uses a hard-coded `alias` to point it. Since
@@ -125,7 +132,7 @@ location ~ /([a-zA-Z0-9-]+)-config.js {
 See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
 Nginx config example.
 
-## 7. Custom config.js
+### 3.5 Custom config.js
 
 Create an additional `config.js` file in `/etc/jitsi/meet/` for each feature
 set. The custom `config.js` file should be named as `PREFIX-config.js`. `PREFIX`
@@ -144,7 +151,7 @@ Check [custom config.js](docs/custom-config-js.md) for more info.
 
 See also [custom interface_config.js](docs/custom-interface-config.md).
 
-## 8. Nginx customization (custom welcome page)
+## 4. Nginx customization (custom welcome page)
 
 As an option, it is possible to change the default landing page. This may be a
 static `HTML` page in `Jitsi` server or another page hosted on a different web
@@ -160,7 +167,7 @@ location = / {
 See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
 Nginx config example.
 
-## 9. Limitations
+## 5. Limitations
 
 This implementation has some limitations:
 
@@ -176,7 +183,7 @@ This implementation has some limitations:
 
 - A `path` with three subsections is mandatory as the meeting address.
 
-## 10. Links
+## 6. Links
 
 - [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
 - [Default index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html)
