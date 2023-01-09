@@ -6,11 +6,11 @@
 - [2. Custom UI with embedded Jitsi](#2-custom-ui-with-embedded-jitsi)
 - [3. Custom Jitsi with multiple index pages](#3-custom-jitsi-with-multiple-index-pages)
   - [3.1 Custom Jitsi URL](#31-custom-jitsi-url)
-  - [3.2 Nginx customization (custom index pages)](#32-nginx-customization-custom-index-pages)
+  - [3.2 Nginx configuraion for custom index pages](#32-nginx-configuration-for-custom-index-pages)
   - [3.3 Custom index pages](#33-custom-index-pages)
-  - [3.4 Nginx customization (custom config.js)](#34-nginx-customization-custom-configjs)
+  - [3.4 Nginx configuration for custom config.js](#34-nginx-Configuration-for-custom-configjs)
   - [3.5 Custom config.js](#35-custom-configjs)
-- [4. Nginx customization (custom welcome page)](#4-nginx-customization-custom-welcome-page)
+- [4. Nginx Configuration for custom welcome page](#4-nginx-configuration-for-custom-welcome-page)
 - [5. Limitations](#5-limitations)
 - [6. iFrame vs multiple index pages](#6-iframe-vs-multiple-index-pages)
 - [7. Links](#7-links)
@@ -61,7 +61,7 @@ room group_).
 Therefore we need a third section in `path` to put the `code`. So we are using a
 `path` with three subsections in our implementation.
 
-### 3.2 Nginx customization (custom index pages)
+### 3.2 Nginx configuration for custom index pages
 
 `Nginx` redirects users to `index.html` which is located in
 `/usr/share/jitsi-meet/` by default and this index page sets most of the runtime
@@ -116,7 +116,7 @@ index pages according to needs. For example set custom config files in it.
 
 Check [custom index pages](docs/custom-index-pages.md) for more info.
 
-### 3.4 Nginx customization (custom config.js)
+### 3.4 Nginx configuration for custom config.js
 
 `config.js` sets most of the runtime features and it is located in
 `/etc/jitsi/meet/` folder. `Nginx` uses a hard-coded `alias` to point it. Since
@@ -154,7 +154,7 @@ Check [custom config.js](docs/custom-config-js.md) for more info.
 
 See also [custom interface_config.js](docs/custom-interface-config.md).
 
-## 4. Nginx customization (custom welcome page)
+## 4. Nginx configuration for custom welcome page
 
 As an option, it is possible to change the default landing page. This may be a
 static `HTML` page in `Jitsi` server or another page hosted on a different web
