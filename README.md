@@ -32,11 +32,11 @@ This is the first layer of customization and mostly involves customizing the
 outer space and adjusting some Jitsi behavior by overwriting the configuration
 parameters.
 
-Check [custom-ui-a.html](templates/custom-ui/custom-ui-a.html) for a sample page
+Check [custom-ui.html](templates/custom-ui/custom-ui.html) for a sample page
 with embedded `Jitsi`.
 
 Click
-[this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui-a.html)
+[this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui.html)
 to see it in action.
 
 ## 3. Custom Jitsi URL
