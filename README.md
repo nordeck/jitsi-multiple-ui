@@ -168,7 +168,10 @@ This implementation has some limitations:
 - Not very flexible if frequent changes to Jitsi configuration are required.
 
 - Configuration parameters are not always backward compatible. They must be
-  checked and tested before every upgrades.
+  checked and tested before each upgrade.
+
+- `Nginx` config may be different in new releases. It must be checked and tested
+  with our custom changes before each upgrade.
 
 - A `path` with three subsections is mandatory as the meeting address.
 
@@ -180,4 +183,6 @@ This implementation has some limitations:
 - [Whitelisted config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/configWhitelist.ts)
 - [Default interface_config.js](https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js)
 - [Whitelisted interface_config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/interfaceConfigWhitelist.ts)
+- [Default Nginx Config](https://github.com/jitsi/jitsi-meet/blob/master/doc/debian/jitsi-meet/jitsi-meet.example)
+- [Customized Nginx Config](templates/etc/nginx/sites-available/jms.conf)
 - [Jitsi URL Generator](https://shawnchin.github.io/jitsi-url-generator/)
