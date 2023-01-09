@@ -42,9 +42,11 @@ to see it in action.
 
 ## 3. Custom Jitsi with multiple index pages
 
-`Jitsi` publishes the same index page with the same feature set for all
-participants and for all meeting rooms. The following changes allow `Jitsi` to
-publish different index pages for different user groups.
+`Jitsi` publishes the same
+[index](https://github.com/jitsi/jitsi-meet/blob/master/index.html) page with
+the same feature set for all participants and for all meeting rooms by default.
+The following changes allow `Jitsi` to publish different index pages for
+different user groups.
 
 ### 3.1 Custom Jitsi URL
 
