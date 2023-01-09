@@ -5,7 +5,7 @@
 - [1. About](#1-about)
 - [2. Custom UI with embedded Jitsi](#2-custom-ui-with-embedded-jitsi)
 - [3. Custom Jitsi with multiple index pages](#3-custom-jitsi-with-multiple-index-pages)
-  - [3.1 Custom Jitsi URL](#31-custom-jitsi-ui)
+  - [3.1 Custom Jitsi URL](#31-custom-jitsi-url)
   - [3.2 Nginx customization (custom index pages)](#32-nginx-customization-custom-index-pages)
   - [3.3 Custom index pages](#33-custom-index-pages)
   - [3.4 Nginx customization (custom config.js)](#34-nginx-customization-custom-configjs)
