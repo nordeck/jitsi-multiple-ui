@@ -167,6 +167,9 @@ This implementation has some limitations:
 
 - Not very flexible if frequent changes to Jitsi configuration are required.
 
+- Configuration parameters are not always backward compatible. They must be
+  checked and tested before every upgrades.
+
 - A `path` with three subsections is mandatory as the meeting address.
 
 ## 10. Links
