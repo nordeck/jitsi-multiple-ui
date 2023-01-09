@@ -1,4 +1,6 @@
-# Nginx rewrite flow
+# Nginx internal flow
+
+`Nginx` processes the request via some internal flow (`rewrite`) rules.
 
 ## Default flow
 
