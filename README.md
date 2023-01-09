@@ -10,6 +10,7 @@
 - [6. Nginx customization (custom config.js)](#6-nginx-customization-custom-configjs)
 - [7. Custom config.js](#7-custom-configjs)
 - [8. Nginx customization (custom welcome page)](#8-nginx-customization-custom-welcome-page)
+- [9. Limitations](#9-limitations)
 
 ## 1. About
 
@@ -156,3 +157,9 @@ location = / {
 
 See [jms.conf](templates/etc/nginx/sites-available/jms.conf) as a customized
 Nginx config example.
+
+## 9. Limitations
+
+This implementation has some limitations:
+
+- Works on mobile browsers but not on mobile Jitsi applications.
