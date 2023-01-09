@@ -177,4 +177,6 @@ This implementation has some limitations:
 - [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
 - [Default index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html)
 - [Default config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js)
-- [Default interfaces_config.js](https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js)
+- [Whitelisted config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/configWhitelist.ts)
+- [Default interface_config.js](https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js)
+- [Whitelisted interface_config keys](https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/config/interfaceConfigWhitelist.ts)
