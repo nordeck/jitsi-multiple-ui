@@ -28,8 +28,9 @@ server.
 
 `Jitsi` will be embedded into custom user interfaces using
 [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe).
-This is the first layer of customization and mostly covers customization of
-outer space, not Jitsi itself.
+This is the first layer of customization and mostly involves customizing the
+outer space and adjusting some Jitsi behavior by overwriting the configuration
+parameters.
 
 Check [custom-ui-a.html](templates/custom-ui/custom-ui-a.html) for a sample page
 with embedded `Jitsi`.
