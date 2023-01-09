@@ -163,3 +163,7 @@ Nginx config example.
 This implementation has some limitations:
 
 - Works on mobile browsers but not on mobile Jitsi applications.
+
+- Not very flexible if frequent changes to Jitsi configuration are required.
+
+- A `path` with three subsections is mandatory as the meeting address.
