@@ -172,3 +172,6 @@ This implementation has some limitations:
 ## 10. Links
 
 - [Jitsi iFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
+- [Default index.html](https://github.com/jitsi/jitsi-meet/blob/master/index.html)
+- [Default config.js](https://github.com/jitsi/jitsi-meet/blob/master/config.js)
+- [Default interfaces_config.js](https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js)
