@@ -1,6 +1,9 @@
+# Nginx rewrite flow
+
+## Default flow
+
 ```
 -> https://jitsi.mydomain.corp/f1/f2/f3/f4/myroom  ->  path = "/f1/f2/f3/f4/myroom"
-                                                       tenant = ""
 
 -> location ~ ^/([^/?&:'"]+)/(.*)$                 ->  path = "/f2/f3/f4/myroom"
                                                        tenant = "f1/"
