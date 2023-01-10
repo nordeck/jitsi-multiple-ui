@@ -39,7 +39,7 @@ with embedded `Jitsi`. Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui.html)
 to see it in action.
 
-Check [custom-ui-2.html](templates/custom-ui/custom-ui.html) for a sample page
+Check [custom-ui-2.html](templates/custom-ui/custom-ui-2.html) for a sample page
 with some advanced features. Click
 [this link](https://nordeck.github.io/jitsi-multiple-ui/templates/custom-ui/custom-ui-2.html)
 to see it in action.
