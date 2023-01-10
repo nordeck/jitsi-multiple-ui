@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <style>
+      html, body {
+        height: 100%
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-3">
+          <div class="row justify-content-center h-50">
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="https://nordeck.net/wp-content/uploads/2020/05/NIC_logo_Nordeck-300x101.png"
+              />
+              <p class="fw-bolder fs-6 text-primary">
+                Welcome to Nordeck
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center h-50">
+            <div class="col mt-auto mb-3">
+              <div class="row m-3">
+                <button
+                  id="toggleRaiseHand"
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="toggleRaiseHand()">
+                  Toogle Raise Hand
+                </button>
+              </div>
+
+              <div class="row m-3">
+                <button
+                  id="toggleParticipants"
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="toggleParticipants()">
+                  Toogle Participants
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9" id="meet"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const random = Math.floor((Math.random() * 9000) + 1000);
+      const domain = 'meet.jit.si';
+      const options = {
+        // For the customized environment, roomName must have 3 subsections.
+        // roomName: 'code/tenant/room',
+        roomName: 'tenant/myroom',
+        width: '100%',
+        height: '98%',
+        parentNode: document.querySelector('#meet'),
+        userInfo: {
+          displayName: `user-${random}`
+        },
+        configOverwrite: {
+          prejoinConfig: {
+            enabled: true
+          }
+        },
+        interfaceConfigOverwrite: {
+        }
+      }
+      const api = new JitsiMeetExternalAPI(domain, options);
+
+      // toggleRaiseHand
+      function toggleRaiseHand() {
+        api.executeCommand("toggleRaiseHand");
+      }
+
+      // toggleParticipants
+      function toggleParticipants() {
+        api.isParticipantsPaneOpen()
+          .then(state => {
+            api.executeCommand("toggleParticipantsPane", !state);
+          });
+      }
+    </script>
+  </body>
+</html>
