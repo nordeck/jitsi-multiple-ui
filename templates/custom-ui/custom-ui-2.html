@@ -99,7 +99,6 @@
       }
       const api = new JitsiMeetExternalAPI(domain, options);
       const status = document.getElementById("status");
-      status.value
 
       // toggleRaiseHand
       function toggleRaiseHand() {
@@ -112,6 +111,38 @@
           .then(state => {
             api.executeCommand("toggleParticipantsPane", !state);
           });
+      }
+
+      // event listeners
+      api.addListener("audioMuteStatusChanged", onAudioMute);
+      api.addListener("tileViewChanged", onTileView);
+      api.addListener("participantsPaneToggled", onParticipantPane);
+
+      // onAudioMute
+      function onAudioMute(data) {
+         if (data.muted) {
+           status.innerText = "Muted";
+         } else {
+           status.innerText = "Unmuted";
+         }
+      }
+
+      // onTileView
+      function onTileView(data) {
+         if (data.enabled) {
+           status.innerText = "Tile view";
+         } else {
+           status.innerText = "Stage view";
+         }
+      }
+
+      // onParticipantPane
+      function onParticipantPane(data) {
+         if (data.open) {
+           status.innerText = "Participant pane is open";
+         } else {
+           status.innerText = "Participant pane is closed";
+         }
       }
     </script>
   </body>
