@@ -13,7 +13,7 @@
    ╰────────────╎────────────╯          ╰────────────╎────────────╯          ╰────────────╎────────────╯
                 ╎                                    ╎                                    ╎
                 ╎                                    ╎                                    ╎
-             code-A                               code-B                               code-C
+            role-code                            role-code                            role-code
                 ╎                                    ╎                                    ╎
                 ╎                                    ╎                                    ╎
                 ╰╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╮    ╎    ╭╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╯
@@ -22,7 +22,7 @@
                                                 ╎    ╎    ╎
                                                 ▼    ▼    ▼
                                              ╭───────────────╮ ╭────────────╮ ╭────────────╮
-                        https://jitsi.server/│  JITSI-CODE   │/│   TENANT   │/│    ROOM    │
+                        https://jitsi.server/│   ROLE-CODE   │/│   TENANT   │/│    ROOM    │
                                              ╰──┬────┬────┬──╯ ╰────────────╯ ╰────────────╯
                                                 ╎    ╎    ╎
                                                 ╎    ╎    ╎
@@ -31,9 +31,9 @@
                    ╎                                 ╎                                 ╎
                    ▼                                 ▼                                 ▼
              ──────┴─────────                  ──────┴─────────                  ──────┴─────────
-             - config-A                        - config-B                        - config-C
-             - interface-A                     - interface-B                     - interface-C
-             - features-set-A                  - features-set-B                  - features-set-C
+             - config-1                        - config-2                        - config-3
+             - interface-1                     - interface-2                     - interface-3
+             - features-set-1                  - features-set-2                  - features-set-3
 
 
 # vim: tw=140
